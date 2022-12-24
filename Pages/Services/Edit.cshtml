@@ -1,0 +1,20 @@
+﻿@page
+@model lab5.Pages.Services.EditModel
+
+<form method = "post">
+	<input asp-for="_service.ID" hidden />
+	<label>Service</label>
+	<input asp-for="_service.ServiceName" />
+	<span asp-validation-for="_service.ServiceName"></span>
+	<br/>
+	<label>Per meter</label>
+	<input asp-for="_service.PricePerSquareMeter" />
+	<span asp-validation-for="_service.PricePerSquareMeter"></span>
+	<br/>
+	<label>Per person</label>
+	<input asp-for="_service.PricePerPerson" />
+	<span asp-validation-for="_service.PricePerPerson"></span>
+	<br/>
+	<button type="submit">Update service</button>
+	<button><a asp-page="Index">Return to all services</a></button>
+</form>

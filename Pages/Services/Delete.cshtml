@@ -1,0 +1,18 @@
+﻿@page
+@model lab5.Pages.Services.DeleteModel
+
+
+<form method = "post" asp-route-id="@Model._service.ID">
+	<input asp-for="_service.ID" hidden />
+	<label>Service</label>
+	<input asp-for="_service.ServiceName" disabled />
+	<br/>
+	<label>Per meter</label>
+	<input asp-for="_service.PricePerSquareMeter" disabled />
+	<br/>
+	<label>Per person</label>
+	<input asp-for="_service.PricePerPerson" disabled />
+	<br/>
+	<button type="submit">Delete service</button>
+	<button><a asp-page="Index">Return to all services</a></button>
+</form>

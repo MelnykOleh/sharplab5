@@ -1,0 +1,18 @@
+﻿@page
+@model lab5.Pages.Addresses.DeleteModel
+
+
+<form method = "post" asp-route-id="@Model._address.ID">
+	<input asp-for="_address.ID" hidden />
+	<label>Street</label>
+	<input asp-for="_address.Street" disabled />
+	<br/>
+	<label>House</label>
+	<input asp-for="_address.House" disabled />
+	<br/>
+	<label>Apartment</label>
+	<input asp-for="_address.Apartment" disabled />
+	<br/>
+	<button type="submit">Delete address</button>
+	<button><a asp-page="Index">Return to all addresses</a></button>
+</form>

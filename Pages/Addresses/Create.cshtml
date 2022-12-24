@@ -1,0 +1,19 @@
+﻿@page
+@model lab5.Pages.Addresses.CreateModel
+
+<form method = "post">
+	<label>Street</label>
+	<input asp-for="_address.Street" />
+	<span asp-validation-for="_address.Street"></span>
+	<br/>
+	<label>House</label>
+	<input asp-for="_address.House" />
+	<span asp-validation-for="_address.House"></span>
+	<br/>
+	<label>Apartment</label>
+	<input asp-for="_address.Apartment" />
+	<span asp-validation-for="_address.Apartment"></span>
+	<br/>
+	<button type="submit">Add new reader</button>
+	<button><a asp-page="Index">Return to all readers</a></button>
+</form>

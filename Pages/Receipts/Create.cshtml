@@ -1,0 +1,59 @@
+﻿@page
+@model lab5.Pages.Receipts.CreateModel
+
+<h1>Add new information about receipt</h1>
+
+<form method="post">
+	<div class"mb-3">
+		<label>Consumer</label>
+		<select asp-for="_receipt.ConsumerID" asp-items="@Model._receipts">
+			<option>Choose consumer</option>
+		</select>
+		<span asp-validation-for="_receipt.ConsumerID"></span>
+	</div>
+	<div class"mb-3">
+		<label>Service</label>
+		<select asp-for="_receipt.ServiceID" asp-items="@Model._receipts">
+			<option>Choose service</option>
+		</select>
+		<span asp-validation-for="_receipt.ServiceID"></span>
+	</div>
+	<div class"mb-3">
+		<label>Payment</label>
+		<input asp-for="_receipt.TypeOfPayment" />
+		<span asp-validation-for="_receipt.TypeOfPayment"></span>
+	</div>
+	<div class"mb-3">
+		<label>By Date</label>
+		<input asp-for="_receipt.ByDate" type="date" />
+		<span asp-validation-for="_receipt.ByDate"></span>
+	</div>
+	<div class"mb-3">
+		<label>Date Of Payment</label>
+		<input asp-for="_receipt.DateOfPayment" type="date" />
+		<span asp-validation-for="_receipt.DateOfPayment"></span>
+	</div>
+	<div class"mb-3">
+		<label>Amount</label>
+		<input asp-for="_receipt.Amount" />
+		<span asp-validation-for="_receipt.Amount"></span>
+	</div
+	<div class"mb-3">
+		<label>Benefits</label>
+		<input asp-for="_receipt.Benefits" />
+		<span asp-validation-for="_receipt.Benefits"></span>
+	</div>
+	<div class"mb-3">
+		<label>Subsidies</label>
+		<input asp-for="_receipt.Subsidies" />
+		<span asp-validation-for="_receipt.Subsidies"></span>
+	</div>
+	<div class"mb-3">
+		<label>Final Amount</label>
+		<input asp-for="_receipt.FinalAmount" />
+		<span asp-validation-for="_receipt.FinalAmount"></span>
+	</div>
+	<button type="submit">Add new information about receipt</button>
+	<button><a asp-page="Index">View all information about receipts</a></button>
+
+</form>

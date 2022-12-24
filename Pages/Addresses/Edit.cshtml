@@ -1,0 +1,20 @@
+﻿@page
+@model lab5.Pages.Addresses.EditModel
+
+<form method = "post">
+	<input asp-for="_address.ID" hidden />
+	<label>Street</label>
+	<input asp-for="_address.Street" />
+	<span asp-validation-for="_address.Street"></span>
+	<br/>
+	<label>House</label>
+	<input asp-for="_address.House" />
+	<span asp-validation-for="_address.House"></span>
+	<br/>
+	<label>Apartment</label>
+	<input asp-for="_address.Apartment" />
+	<span asp-validation-for="_address.Apartment"></span>
+	<br/>
+	<button type="submit">Update address</button>
+	<button><a asp-page="Index">Return to all addresses</a></button>
+</form>

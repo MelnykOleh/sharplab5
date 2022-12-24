@@ -1,0 +1,47 @@
+﻿@page
+@model lab5.Pages.Consumers.CreateModel
+
+<h1>Create new consumer</h1>
+
+<form method="post">
+	<div class"mb-3">
+		<label>Last Name</label>
+		<input asp-for="_consumer.LastName" />
+		<span asp-validation-for="_consumer.LastName"></span>
+	</div>
+	<div class"mb-3">
+		<label>Name</label>
+		<input asp-for="_consumer.Name" />
+		<span asp-validation-for="_consumer.Name"></span>
+	</div>
+	<div class"mb-3">
+		<label>Middle Name</label>
+		<input asp-for="_consumer.MiddleName" />
+		<span asp-validation-for="_consumer.MiddleName"></span>
+	</div>
+	<div class"mb-3">
+		<label>Residents</label>
+		<input asp-for="_consumer.NumberOfResidents" />
+		<span asp-validation-for="_consumer.NumberOfResidents"></span>
+	</div>
+	<div class"mb-3">
+		<label>Square</label>
+		<input asp-for="_consumer.Square" />
+		<span asp-validation-for="_consumer.Square"></span>
+	</div>
+	<div class"mb-3">
+		<label>Choose address</label>
+		<select asp-for="_consumer.AddressID" asp-items="@Model._items">
+			<option>Choose address</option>
+		</select>
+		<span asp-validation-for="_consumer.AddressID"></span>
+	</div>
+	<div class"mb-3">
+		<label>Account</label>
+		<input asp-for="_consumer.PersonAccount" />
+		<span asp-validation-for="_consumer.PersonAccount"></span>
+	</div>
+	<button type="submit">Create new consumer</button>
+	<button><a asp-page="Index">Return to all consumers</a></button>
+
+</form>
